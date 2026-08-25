@@ -14,10 +14,17 @@
 :root {
   --bg:        #FAF8F3;
   --ink:       #2B2E2B;
-  --sage:      #6C7F66;
+  --sage:      #6C7F66;   /* brand sage — marks, rules, decorative only */
   --sage-deep: #506248;
   --muted:     #747A71;
   --bronze:    #9A7743;
+
+  /* Two text-safe shades of the brand sage. #6C7F66 sits at 4.1–4.3:1, just
+     under WCAG AA, so anything carrying words uses these instead. The hue is
+     unchanged; they are the same green a step darker. */
+  --sage-text: #5A6B54;   /* sage on ivory      — 5.4:1 */
+  --sage-btn:  #627359;   /* white on sage      — 5.1:1 */
+  --muted-aa:  #6B7168;   /* muted on any panel — 4.5:1+ */
 
   --rule:      #E4DFD2;
   --rule-soft: #EFEBE0;
@@ -117,7 +124,7 @@ button:focus-visible { outline: 3px solid var(--sage-deep); outline-offset: 3px;
   min-height: 52px;
   padding: 0 24px;
   border-radius: 11px;
-  background: var(--sage);
+  background: var(--sage-btn);
   color: #fff;
   font-family: var(--sans);
   font-size: 17px;
@@ -135,7 +142,7 @@ button:focus-visible { outline: 3px solid var(--sage-deep); outline-offset: 3px;
   margin-top: 14px;
   font-size: 13.5px;
   line-height: 1.5;
-  color: var(--muted);
+  color: var(--muted-aa);
 }
 
 /* --- Sections ----------------------------------------------------------- */
@@ -147,12 +154,12 @@ section { padding-block: 56px; }
   font-weight: 700;
   letter-spacing: .16em;
   text-transform: uppercase;
-  color: var(--sage);
+  color: var(--sage-text);
   margin-bottom: 14px;
 }
 
 h2 { font-size: clamp(27px, 5.6vw, 38px); }
-.lede { margin-top: 14px; font-size: 17px; color: var(--muted); max-width: 56ch; }
+.lede { margin-top: 14px; font-size: 17px; color: var(--muted-aa); max-width: 56ch; }
 
 /* --- Hero --------------------------------------------------------------- */
 .hero { padding-top: 40px; padding-bottom: 44px; }
@@ -183,7 +190,7 @@ h2 { font-size: clamp(27px, 5.6vw, 38px); }
 .shot img { width: 100%; }
 .shot-cap {
   font-size: 13.5px;
-  color: var(--muted);
+  color: var(--muted-aa);
   margin-top: 10px;
   text-align: center;
 }
@@ -223,13 +230,13 @@ h2 { font-size: clamp(27px, 5.6vw, 38px); }
   font-family: var(--serif);
   font-size: 15px;
   font-weight: 600;
-  color: var(--sage);
+  color: var(--sage-text);
   letter-spacing: .1em;
   display: block;
   margin-bottom: 6px;
 }
 .step h3 { font-size: clamp(20px, 4.6vw, 24px); }
-.step p { margin-top: 7px; color: var(--muted); font-size: 16.5px; }
+.step p { margin-top: 7px; color: var(--muted-aa); font-size: 16.5px; }
 
 /* --- Feature checklist -------------------------------------------------- */
 .checks { list-style: none; margin: 30px 0 0; padding: 0; display: grid; gap: 0; }
@@ -242,7 +249,7 @@ h2 { font-size: clamp(27px, 5.6vw, 38px); }
   font-size: 17px;
 }
 .checks li:first-child { border-top: 1px solid var(--rule-soft); }
-.checks .tick { color: var(--sage); font-weight: 700; flex: none; }
+.checks .tick { color: var(--sage-text); font-weight: 700; flex: none; }
 
 /* --- Price -------------------------------------------------------------- */
 .price-box {
@@ -259,7 +266,7 @@ h2 { font-size: clamp(27px, 5.6vw, 38px); }
   line-height: 1;
   letter-spacing: -0.03em;
 }
-.price-sub { margin-top: 8px; color: var(--muted); font-size: 16px; }
+.price-sub { margin-top: 8px; color: var(--muted-aa); font-size: 16px; }
 .price-box .btn { margin-top: 26px; }
 
 /* --- Closing ------------------------------------------------------------ */
@@ -272,18 +279,18 @@ h2 { font-size: clamp(27px, 5.6vw, 38px); }
   padding-block: 36px;
   padding-bottom: calc(36px + env(safe-area-inset-bottom));
   font-size: 15px;
-  color: var(--muted);
+  color: var(--muted-aa);
 }
 .footer-brand { font-family: var(--serif); font-size: 18px; color: var(--ink); font-weight: 600; }
 .footer-links { list-style: none; margin: 18px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 22px; }
-.footer-links a { color: var(--muted); text-decoration: none; display: inline-block; padding: 6px 0; }
+.footer-links a { color: var(--muted-aa); text-decoration: none; display: inline-block; padding: 6px 0; }
 .footer-links a:hover { color: var(--ink); text-decoration: underline; }
 .footer-legal { margin-top: 22px; font-size: 13.5px; line-height: 1.55; max-width: 62ch; }
 
 /* --- Long-form pages (privacy / terms / contact) ------------------------ */
 .doc { padding-block: 44px 64px; }
 .doc h1 { font-size: clamp(30px, 6.4vw, 42px); }
-.doc .updated { margin-top: 12px; color: var(--muted); font-size: 14.5px; }
+.doc .updated { margin-top: 12px; color: var(--muted-aa); font-size: 14.5px; }
 .doc h2 { font-size: clamp(20px, 4.4vw, 25px); margin-top: 38px; }
 .doc p, .doc li { margin-top: 14px; font-size: 16.5px; line-height: 1.65; color: #3E433E; }
 .doc ul { padding-left: 22px; }
