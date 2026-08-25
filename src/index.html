@@ -1,152 +1,89 @@
 <main>
 
-<!-- HERO ------------------------------------------------------------------>
 <section class="hero">
-  <div class="wrap">
-    <h1>If your mom went to the hospital tomorrow, would you know where her insurance information is?</h1>
-    <p class="hero-sub">You don&rsquo;t need all the answers. You just need one place to start.</p>
-    <div class="hero-cta">
-      <a class="btn btn-block" href="{{CHECKOUT_URL}}">Get familyfiles — {{PRICE}}</a>
-      <p class="cta-note">No subscription &middot; No account required &middot; Your information stays on your device</p>
+  <p class="kicker">One-time {{PRICE}} &middot; No subscription</p>
+  <h1>Everything your family would need to know, in one place.</h1>
+  <p class="hero-sub">A guided app that walks you through the important stuff — contacts, health, insurance, accounts, documents — in a few minutes at a time.</p>
+  <div class="hero-cta">
+    <a class="btn btn-lg" href="{{CHECKOUT_URL}}">Get familyfiles — {{PRICE}}</a>
+    <p class="cta-note">No account &middot; Stays on your device</p>
+  </div>
+</section>
+
+<section class="slider" aria-roledescription="carousel" aria-label="familyfiles screens">
+  <div class="viewport">
+    <div class="track" id="track" tabindex="0" aria-live="polite">
+
+      <div class="slide" role="group" aria-roledescription="slide" aria-label="1 of 3">
+        <div class="slide-img">
+          <picture>
+            <source media="(min-width: 720px)" srcset="/assets/app-overview-1300.webp 1300w, /assets/app-overview.webp 2600w" sizes="(min-width: 1120px) 1040px, calc(100vw - 40px)">
+            <img src="/assets/app-overview-sm.webp" width="1280" height="800" fetchpriority="high" decoding="async"
+                 alt="The familyfiles overview screen, showing readiness at 68 percent, the recommended next step, and progress across People, Health, Money and Home.">
+          </picture>
+        </div>
+        <p class="slide-cap">See exactly where things stand, and what to do next.</p>
+      </div>
+
+      <div class="slide" role="group" aria-roledescription="slide" aria-label="2 of 3">
+        <div class="slide-img">
+          <picture>
+            <source media="(min-width: 720px)" srcset="/assets/app-tofind-1300.webp 1300w, /assets/app-tofind.webp 2600w" sizes="(min-width: 1120px) 1040px, calc(100vw - 40px)">
+            <img src="/assets/app-tofind-sm.webp" width="1280" height="800" loading="lazy" decoding="async"
+                 alt="The Things to Find screen, listing a life insurance policy, safe deposit box details and property records, each with a note on where to look.">
+          </picture>
+        </div>
+        <p class="slide-cap">Anything you don&rsquo;t know yet becomes a short list to track down.</p>
+      </div>
+
+      <div class="slide" role="group" aria-roledescription="slide" aria-label="3 of 3">
+        <div class="slide-img">
+          <picture>
+            <source media="(min-width: 720px)" srcset="/assets/app-emergency-1300.webp 1300w, /assets/app-emergency.webp 2600w" sizes="(min-width: 1120px) 1040px, calc(100vw - 40px)">
+            <img src="/assets/app-emergency-sm.webp" width="1280" height="800" loading="lazy" decoding="async"
+                 alt="The emergency reference page, showing primary and backup contacts, doctor, hospital, pharmacy, insurance and where documents are kept.">
+          </picture>
+        </div>
+        <p class="slide-cap">One page with the answers people ask for first — ready to print or share.</p>
+      </div>
+
     </div>
-
-    <figure class="shot" style="margin-bottom:0">
-      <picture>
-        <source media="(min-width: 720px)" srcset="/assets/product-dashboard.webp" width="1600" height="1176">
-        <img src="/assets/product-phone-dashboard.webp" width="780" height="1320" fetchpriority="high" decoding="async"
-             alt="The familyfiles overview screen, showing family readiness at 68%, a recommended next step, a Things to Find count, and progress bars for People, Health, Money and Home.">
-      </picture>
-    </figure>
+    <button class="arrow arrow-prev" type="button" data-slide="prev" aria-controls="track" aria-label="Previous screen">&#8592;</button>
+    <button class="arrow arrow-next" type="button" data-slide="next" aria-controls="track" aria-label="Next screen">&#8594;</button>
   </div>
+  <div class="dots" id="dots" role="tablist" aria-label="Choose a screen"></div>
 </section>
 
-<!-- PROBLEM --------------------------------------------------------------->
-<section class="section-rule">
-  <div class="wrap narrow">
-    <h2>There are probably things about your parents you should know before you need to know them.</h2>
-    <ul class="plain-list">
-      <li>Where their important documents are.</li>
-      <li>Who to call first.</li>
-      <li>What insurance they have.</li>
-      <li>Where their financial information lives.</li>
-      <li>Who has a spare key.</li>
-      <li>Where important passwords are kept.</li>
-    </ul>
-    <p class="aside">You&rsquo;re not unprepared because you don&rsquo;t care. You just haven&rsquo;t had a simple way to get this together.</p>
-  </div>
-</section>
-
-<!-- HOW IT WORKS ---------------------------------------------------------->
-<section class="section-rule">
+<section class="steps-section">
   <div class="wrap">
-    <h2>Get it together, one useful thing at a time.</h2>
     <ol class="steps">
       <li class="step">
-        <span class="step-n">01</span>
-        <h3>Start with what&rsquo;s important.</h3>
-        <p>familyfiles guides you through the information that matters most.</p>
+        <p class="step-n">01</p>
+        <h3>Answer simple prompts</h3>
+        <p>Small guided steps, two to five minutes each.</p>
       </li>
       <li class="step">
-        <span class="step-n">02</span>
-        <h3>Mark what you don&rsquo;t know.</h3>
-        <p>Anything missing becomes a simple Things to Find list.</p>
+        <p class="step-n">02</p>
+        <h3>Mark what you don&rsquo;t know</h3>
+        <p>Gaps become a short list instead of a worry.</p>
       </li>
       <li class="step">
-        <span class="step-n">03</span>
-        <h3>Keep a Family File.</h3>
-        <p>Review, print or share the information with the people you trust.</p>
+        <p class="step-n">03</p>
+        <h3>Keep one clear page</h3>
+        <p>Print it, or share it with the people you trust.</p>
       </li>
     </ol>
   </div>
 </section>
 
-<!-- THE ACTUAL EXPERIENCE ------------------------------------------------->
-<section class="section-rule">
-  <div class="wrap">
-    <h2>Not another giant checklist.</h2>
-    <p class="lede">familyfiles walks you through it in small steps, so you always know what to do next.</p>
-
-    <figure class="shot">
-      <img src="/assets/product-phone-step.webp" width="780" height="1520" loading="lazy" decoding="async"
-           alt="A single familyfiles step on a phone, asking for the insurance company, member number and customer service phone from one insurance card.">
-    </figure>
-    <p class="shot-cap">One small step at a time — most take two to five minutes.</p>
-
-    <figure class="shot">
-      <picture>
-        <source media="(min-width: 720px)" srcset="/assets/product-things-to-find.webp" width="1400" height="1029">
-        <img src="/assets/product-phone-find.webp" width="780" height="1440" loading="lazy" decoding="async"
-             alt="The Things to Find screen listing a life insurance policy, safe deposit box details and property records, each with a note about where to look.">
-      </picture>
-    </figure>
-    <p class="shot-cap">Anything you don&rsquo;t know becomes a short list to track down.</p>
-
-    <figure class="shot">
-      <picture>
-        <source media="(min-width: 720px)" srcset="/assets/product-emergency.webp" width="1400" height="1029">
-        <img src="/assets/product-phone-emergency.webp" width="780" height="1520" loading="lazy" decoding="async"
-             alt="The Emergency Reference page showing name, primary and backup contacts, doctor, hospital, pharmacy, insurance and where documents are kept — ready to print.">
-      </picture>
-    </figure>
-    <p class="shot-cap">An Emergency Reference you can print and keep where it would actually be found.</p>
-
-    <p style="margin-top:36px">
-      <a class="btn btn-block" href="{{CHECKOUT_URL}}">Get familyfiles — {{PRICE}}</a>
-    </p>
-  </div>
-</section>
-
-<!-- PRIVACY --------------------------------------------------------------->
-<section class="section-rule">
-  <div class="wrap narrow">
-    <h2>Your family&rsquo;s information stays yours.</h2>
-    <p class="lede">familyfiles doesn&rsquo;t need an account or a cloud database. Your family information is stored on your device, and you choose when to export or share it.</p>
-  </div>
-</section>
-
-<!-- WHAT YOU GET ---------------------------------------------------------->
-<section class="section-rule">
-  <div class="wrap narrow">
-    <h2>Everything you need to get your family file together.</h2>
-    <ul class="checks">
-      <li><span class="tick" aria-hidden="true">&#10003;</span> Guided family setup</li>
-      <li><span class="tick" aria-hidden="true">&#10003;</span> People &amp; important contacts</li>
-      <li><span class="tick" aria-hidden="true">&#10003;</span> Health information</li>
-      <li><span class="tick" aria-hidden="true">&#10003;</span> Money &amp; financial information</li>
-      <li><span class="tick" aria-hidden="true">&#10003;</span> Home information</li>
-      <li><span class="tick" aria-hidden="true">&#10003;</span> Important documents</li>
-      <li><span class="tick" aria-hidden="true">&#10003;</span> Digital information</li>
-      <li><span class="tick" aria-hidden="true">&#10003;</span> Things to Find</li>
-      <li><span class="tick" aria-hidden="true">&#10003;</span> Emergency Reference</li>
-      <li><span class="tick" aria-hidden="true">&#10003;</span> Family File export</li>
-      <li><span class="tick" aria-hidden="true">&#10003;</span> Private local storage</li>
-    </ul>
-  </div>
-</section>
-
-<!-- PRICE ----------------------------------------------------------------->
-<section class="section-rule" id="get">
-  <div class="wrap narrow">
-    <h2>One less thing to worry about.</h2>
-    <div class="price-box">
-      <div class="price">{{PRICE}}</div>
-      <p class="price-sub">One-time purchase.</p>
-      <a class="btn btn-block" href="{{CHECKOUT_URL}}">Get familyfiles — {{PRICE}}</a>
-      <p class="cta-note">No subscription. No account required.</p>
-    </div>
-  </div>
-</section>
-
-<!-- CLOSING --------------------------------------------------------------->
-<section class="closing">
-  <div class="wrap narrow">
-    <h2>Start with one thing.</h2>
-    <p class="lede">You don&rsquo;t need to finish everything today.</p>
-    <p style="margin-top:28px">
-      <a class="btn btn-block" href="{{CHECKOUT_URL}}">Get familyfiles — {{PRICE}}</a>
-    </p>
-    <p class="cta-note">One-time purchase &middot; No account required</p>
+<section class="buy" id="buy">
+  <div class="buy-card">
+    <p class="price">{{PRICE}}</p>
+    <p class="buy-sub">One-time purchase. Yours to keep.</p>
+    <a class="btn btn-lg" href="{{CHECKOUT_URL}}">Get familyfiles — {{PRICE}}</a>
+    <p class="buy-note">No subscription &middot; No account &middot; Your information stays on your device</p>
   </div>
 </section>
 
 </main>
+<script src="/slider.js" defer></script>

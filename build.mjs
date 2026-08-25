@@ -26,7 +26,7 @@ const SUPPORT_EMAIL = process.env.SUPPORT_EMAIL || cfg.supportEmail
 
 /* Until a checkout link exists, every CTA scrolls to the offer section rather
    than pointing at a dead URL. One config value swaps them all over. */
-const CTA_HREF = CHECKOUT_URL || '/#get'
+const CTA_HREF = CHECKOUT_URL || '/#buy'
 
 const TITLE = "familyfiles — Get your family's important information together"
 const DESC =
@@ -96,7 +96,7 @@ const run = async () => {
 
   const files = await readdir(DIST)
   console.log(`Built ${PAGES.length} pages -> dist/`)
-  console.log(`  checkout: ${CHECKOUT_URL ? CHECKOUT_URL : 'not set — CTAs link to /#get'}`)
+  console.log(`  checkout: ${CHECKOUT_URL ? CHECKOUT_URL : 'not set — CTAs link to /#buy'}`)
   console.log(`  site url: ${SITE_URL}`)
   console.log(`  files:    ${files.join(', ')}`)
 }
