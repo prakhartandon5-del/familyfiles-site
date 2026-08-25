@@ -24,7 +24,7 @@
      unchanged; they are the same green a step darker. */
   --sage-text: #5A6B54;   /* sage on ivory      — 5.4:1 */
   --sage-btn:  #627359;   /* white on sage      — 5.1:1 */
-  --muted-aa:  #6B7168;   /* muted on any panel — 4.5:1+ */
+  --muted-aa:  #686E65;   /* muted on ivory, white or sage tint — 4.6:1+ */
 
   --rule:      #E4DFD2;
   --rule-soft: #EFEBE0;
