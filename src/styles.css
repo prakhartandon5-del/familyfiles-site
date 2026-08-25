@@ -132,12 +132,19 @@ a:hover { color: var(--sage-hover); }
 /* Arrows only steer the JS-driven slider; touch and keyboard work regardless. */
 .no-js .arrow { display: none; }
 
-.dots { display: flex; justify-content: center; gap: 8px; margin-top: 18px; }
+.dots { display: flex; justify-content: center; gap: 4px; margin-top: 8px; }
+/* The dot stays 8px tall as designed; a transparent box around it provides a
+   28px touch target with clearance from its neighbours. */
 .dots button {
-  width: 8px; height: 8px; border-radius: 99px; border: 0; padding: 0;
-  cursor: pointer; background: var(--dot);
-  transition: width .22s ease, background .22s ease;
+  width: 28px; height: 28px; border: 0; padding: 0; background: none;
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
 }
+.dots button::before {
+  content: ''; display: block; width: 8px; height: 8px; border-radius: 99px;
+  background: var(--dot); transition: width .22s ease, background .22s ease;
+}
+.dots button[aria-current='true'] { width: 42px; }
+.dots button[aria-current='true']::before { width: 22px; background: var(--sage); }
 .no-js .dots { display: none; }
 
 /* --- Steps -------------------------------------------------------------- */
