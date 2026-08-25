@@ -1,0 +1,11 @@
+{
+  "name": "familyfiles-site",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Landing page for familyfiles — private family information, organized simply.",
+  "scripts": {
+    "build": "node build.mjs",
+    "dev": "node build.mjs && npx --yes serve dist -l 4321"
+  }
+}
