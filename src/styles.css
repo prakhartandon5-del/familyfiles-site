@@ -20,13 +20,14 @@
 :root {
   --bg:        #F7F6F1;
   --ink:       #1D1F1A;
-  --sage:      #6A7C58;
+  --sage:      #6A7C58;   /* design sage — borders, dots, decorative */
+  --sage-btn:  #637452;   /* design sage one step down: cream on it is 5.0:1 */
   --sage-dark: #59684A;
   --sage-link: #4E5E42;
   --sage-hover:#2C3524;
   --muted:     #5E6157;
-  --faint:     #82857A;   /* design #8A8C80, darkened to clear WCAG AA */
-  --dim:       #83867A;   /* design #A3A597, darkened to clear WCAG AA */
+  --faint:     #6E7166;   /* design #8A8C80, darkened to clear WCAG AA */
+  --dim:       #6E7166;   /* design #A3A597, darkened to clear WCAG AA */
   --line:      #E7E5DA;
   --line-2:    #E4E2D8;
   --line-3:    #EFEDE4;
@@ -83,7 +84,7 @@ a:hover { color: var(--sage-hover); }
 /* --- Buttons ------------------------------------------------------------ */
 .btn {
   display: inline-flex; align-items: center; justify-content: center;
-  background: var(--sage); color: var(--cream);
+  background: var(--sage-btn); color: var(--cream);
   font-family: var(--sans); font-weight: 500; border: 0; cursor: pointer;
   transition: background-color .16s ease;
 }
@@ -137,7 +138,6 @@ a:hover { color: var(--sage-hover); }
   cursor: pointer; background: var(--dot);
   transition: width .22s ease, background .22s ease;
 }
-.dots button[aria-current='true'] { width: 22px; background: var(--sage); }
 .no-js .dots { display: none; }
 
 /* --- Steps -------------------------------------------------------------- */
@@ -149,7 +149,7 @@ a:hover { color: var(--sage-hover); }
   margin: 0; list-style: none;
 }
 .step-n { margin-bottom: 10px; font-size: 13px; letter-spacing: 0.1em; color: var(--dim); }
-.step h3 { margin-bottom: 8px; font-size: 21px; }
+.step h2 { margin-bottom: 8px; font-size: 21px; }
 .step p { font-size: 15.5px; line-height: 1.5; color: var(--muted); }
 
 /* --- Buy ---------------------------------------------------------------- */
